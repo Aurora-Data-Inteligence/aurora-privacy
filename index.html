@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Aurora</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  :root {
+    --ink: #1a1814;
+    --ink-soft: #4a4742;
+    --ink-faint: #8a8780;
+    --rule: #e8e5e0;
+    --bg: #faf8f5;
+    --accent: #2d5a3d;
+    --accent-light: #e8f0eb;
+  }
+ 
+  html { font-size: 16px; scroll-behavior: smooth; }
+ 
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+ 
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+  }
+ 
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+ 
+  .logo span {
+    color: var(--accent);
+  }
+ 
+  .badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border: 1px solid var(--rule);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+  }
+ 
+  /* MAIN */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 5rem 2rem 8rem;
+  }
+ 
+  /* HERO */
+  .hero {
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+ 
+  .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+ 
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+ 
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+ 
+  .meta-row {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    font-weight: 400;
+  }
+ 
+  .meta-row span::before {
+    content: '— ';
+  }
+ 
+  /* SECTIONS */
+  section {
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+ 
+  section:nth-child(1)  { animation-delay: 0.05s; }
+  section:nth-child(2)  { animation-delay: 0.10s; }
+  section:nth-child(3)  { animation-delay: 0.15s; }
+  section:nth-child(4)  { animation-delay: 0.20s; }
+  section:nth-child(5)  { animation-delay: 0.25s; }
+  section:nth-child(6)  { animation-delay: 0.30s; }
+  section:nth-child(7)  { animation-delay: 0.35s; }
+  section:nth-child(8)  { animation-delay: 0.40s; }
+  section:nth-child(9)  { animation-delay: 0.45s; }
+  section:nth-child(10) { animation-delay: 0.50s; }
+ 
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+ 
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+ 
+  h2 .num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+ 
+  p {
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+ 
+  p:last-child { margin-bottom: 0; }
+ 
+  ul {
+    list-style: none;
+    margin: 0.5rem 0 1rem;
+  }
+ 
+  ul li {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+  }
+ 
+  ul li:last-child { border-bottom: none; }
+ 
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+ 
+  /* HIGHLIGHT BOX */
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 6px 6px 0;
+    margin: 1.5rem 0;
+  }
+ 
+  .highlight p {
+    color: var(--ink);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+ 
+  /* CONTACT */
+  .contact-card {
+    background: var(--ink);
+    color: #faf8f5;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+  }
+ 
+  .contact-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #faf8f5;
+  }
+ 
+  .contact-card p {
+    color: #c8c5c0;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .contact-card a {
+    color: #a8d5b5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #a8d5b5;
+    padding-bottom: 1px;
+    transition: opacity 0.2s;
+  }
+ 
+  .contact-card a:hover { opacity: 0.7; }
+ 
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+ 
+  strong { font-weight: 500; color: var(--ink); }
+ 
+  a { color: var(--accent); }
+ 
+  @media (max-width: 600px) {
+    main { padding: 3rem 1.25rem 5rem; }
+    .meta-row { flex-direction: column; gap: 0.5rem; }
+    .contact-card { padding: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+ 
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Aurora<span>.</span></a>
+    <span class="badge">Política de Privacidade</span>
+  </div>
+</header>
+ 
+<main>
+  <div class="hero">
+    <span class="eyebrow">Tri Force — Aurora</span>
+    <h1>Sua privacidade<br><em>em primeiro lugar.</em></h1>
+    <div class="meta-row">
+      <span>Última atualização: Abril de 2026</span>
+      <span>Versão 1.0</span>
+    </div>
+  </div>
+ 
+  <section>
+    <h2><span class="num">01</span> Introdução</h2>
+    <p>A Aurora ("nós", "nosso" ou "Plataforma") é um sistema de venda em live desenvolvido pela Tri Force. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações dos lojistas e consumidores que utilizam nossa plataforma.</p>
+    <p>Ao utilizar a Aurora, você concorda com as práticas descritas neste documento. Caso não concorde, solicitamos que não utilize nossos serviços.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">02</span> Dados que coletamos</h2>
+    <p>Coletamos os seguintes dados para o funcionamento da plataforma:</p>
+    <ul>
+      <li><strong>Dados de conta Instagram/Facebook:</strong> ID de usuário, nome de exibição, foto de perfil, username e dados básicos do perfil profissional, obtidos via Meta Graph API mediante autorização expressa do usuário.</li>
+      <li><strong>Comentários de lives:</strong> texto, timestamp e ID do usuário que comentou, para identificação de intenções de compra durante transmissões ao vivo.</li>
+      <li><strong>Dados de pedidos:</strong> itens selecionados, valores, status de pagamento e dados necessários para emissão de pedido no ERP integrado.</li>
+      <li><strong>Dados de contato:</strong> número de WhatsApp (quando fornecido ou obtido via cadastro vinculado), e-mail e nome completo para comunicações transacionais.</li>
+      <li><strong>Dados de acesso:</strong> logs de autenticação, endereço IP e informações do dispositivo para segurança e prevenção de fraudes.</li>
+      <li><strong>Métricas de engajamento:</strong> alcance, impressões e interações de publicações, obtidos via API de Insights do Instagram, para geração de relatórios ao lojista.</li>
+    </ul>
+  </section>
+ 
+  <section>
+    <h2><span class="num">03</span> Como usamos seus dados</h2>
+    <p>Os dados coletados são utilizados exclusivamente para:</p>
+    <ul>
+      <li>Identificar comentários de intenção de compra durante lives do Instagram e criar pedidos automaticamente na plataforma.</li>
+      <li>Exibir o painel de gestão de lives ao lojista em tempo real (itens vendidos, fila de pedidos, lista de espera).</li>
+      <li>Processar pagamentos via gateway integrado (Pagar.me) e criar os pedidos correspondentes no ERP do lojista (Bling).</li>
+      <li>Enviar notificações transacionais ao consumidor via WhatsApp (confirmação de pedido, status de pagamento).</li>
+      <li>Gerar relatórios de desempenho de lives para o lojista.</li>
+      <li>Garantir a segurança e integridade da plataforma.</li>
+    </ul>
+    <div class="highlight">
+      <p><strong>Importante:</strong> não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins publicitários. Seus dados são usados exclusivamente para a operação da plataforma Aurora.</p>
+    </div>
+  </section>
+ 
+  <section>
+    <h2><span class="num">04</span> Integração com a Meta (Instagram e Facebook)</h2>
+    <p>A Aurora utiliza a Meta Graph API para acessar dados do Instagram mediante autorização explícita do usuário. As permissões solicitadas são:</p>
+    <ul>
+      <li><strong>instagram_business_basic:</strong> leitura de dados básicos do perfil profissional do lojista.</li>
+      <li><strong>instagram_business_manage_comments:</strong> leitura e resposta de comentários em publicações e lives, para identificação e processamento de pedidos.</li>
+      <li><strong>instagram_business_content_publish:</strong> publicação de conteúdo em nome do lojista, quando autorizado explicitamente.</li>
+      <li><strong>instagram_business_manage_messages:</strong> envio de mensagens de boas-vindas e notificações transacionais aos consumidores.</li>
+      <li><strong>instagram_business_manage_insights:</strong> acesso a métricas de engajamento para geração de relatórios de desempenho das lives.</li>
+    </ul>
+    <p>O acesso pode ser revogado a qualquer momento nas configurações de Apps e Sites do Instagram ou do Facebook.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">05</span> Compartilhamento de dados</h2>
+    <p>Compartilhamos dados apenas com os seguintes parceiros, estritamente necessários para a operação:</p>
+    <ul>
+      <li><strong>Pagar.me:</strong> dados necessários para processamento de pagamentos (nome, valor, descrição do pedido).</li>
+      <li><strong>Bling ERP:</strong> dados do pedido (itens, cliente, valor) para criação e gestão de pedidos no sistema do lojista.</li>
+      <li><strong>WhatsApp Business API (Meta):</strong> número de telefone e mensagem transacional para notificações de pedido.</li>
+      <li><strong>Provedores de infraestrutura:</strong> Railway e Vercel, para hospedagem segura da plataforma.</li>
+    </ul>
+    <p>Todos os parceiros estão sujeitos a acordos de confidencialidade e tratamento adequado de dados, em conformidade com a LGPD.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">06</span> Armazenamento e segurança</h2>
+    <p>Seus dados são armazenados em servidores seguros com as seguintes proteções:</p>
+    <ul>
+      <li>Criptografia em trânsito (HTTPS/TLS) em todas as comunicações.</li>
+      <li>Tokens de acesso à Meta armazenados de forma criptografada no banco de dados.</li>
+      <li>Acesso restrito por autenticação e controle de permissões por papel (RBAC).</li>
+      <li>Backups automáticos e monitoramento contínuo de segurança.</li>
+    </ul>
+    <p>Os dados são retidos pelo tempo necessário para a prestação dos serviços ou pelo prazo legal aplicável. Após o encerramento da conta, os dados são anonimizados ou excluídos em até 30 dias.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">07</span> Seus direitos (LGPD)</h2>
+    <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:</p>
+    <ul>
+      <li>Confirmar a existência de tratamento dos seus dados pessoais.</li>
+      <li>Acessar os dados que mantemos sobre você.</li>
+      <li>Corrigir dados incompletos, inexatos ou desatualizados.</li>
+      <li>Solicitar a anonimização, bloqueio ou eliminação dos seus dados.</li>
+      <li>Revogar o consentimento para tratamento dos seus dados a qualquer momento.</li>
+      <li>Portabilidade dos dados a outro fornecedor de serviço.</li>
+      <li>Solicitar informações sobre o compartilhamento dos seus dados.</li>
+    </ul>
+    <div class="highlight">
+      <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail indicado na seção de contato abaixo. Responderemos em até 15 dias úteis.</p>
+    </div>
+  </section>
+ 
+  <section>
+    <h2><span class="num">08</span> Exclusão de dados</h2>
+    <p>Você pode solicitar a exclusão completa dos seus dados a qualquer momento. Para isso:</p>
+    <ul>
+      <li>Envie um e-mail para o endereço de contato indicado abaixo com o assunto "Exclusão de Dados".</li>
+      <li>Ou acesse as configurações da sua conta na plataforma Aurora e utilize a opção "Excluir minha conta".</li>
+      <li>Você também pode revogar o acesso da Aurora no Instagram em: <strong>Configurações → Apps e sites → Aurora → Remover</strong>.</li>
+    </ul>
+    <p>Após a solicitação, seus dados serão eliminados em até 30 dias, exceto aqueles que devemos manter por obrigação legal (ex: dados fiscais de transações).</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">09</span> Cookies e rastreamento</h2>
+    <p>A Aurora utiliza cookies estritamente necessários para o funcionamento da plataforma, como manutenção de sessão autenticada. Não utilizamos cookies de rastreamento para fins publicitários ou de analytics de terceiros.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">10</span> Alterações nesta política</h2>
+    <p>Podemos atualizar esta política periodicamente. Quando houver alterações relevantes, notificaremos os usuários cadastrados por e-mail com antecedência mínima de 15 dias. O uso contínuo da plataforma após a vigência das alterações implica aceitação da nova política.</p>
+  </section>
+ 
+  <section>
+    <h2><span class="num">11</span> Contato e DPO</h2>
+    <div class="contact-card">
+      <h3>Fale com nosso time de privacidade</h3>
+      <p>Dúvidas, solicitações de acesso, correção ou exclusão de dados — estamos aqui para ajudar.</p>
+      <a href="mailto:privacidade@aurora.com.br">privacidade@aurora.com.br</a>
+    </div>
+  </section>
+</main>
+ 
+<footer>
+  <p>© 2026 Tri Force — Aurora. Todos os direitos reservados.<br>
+  CNPJ: XX.XXX.XXX/0001-XX · Caxias do Sul, RS, Brasil</p>
+</footer>
+ 
+</body>
+</html>
